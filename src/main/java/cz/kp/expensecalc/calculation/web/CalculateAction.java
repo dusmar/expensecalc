@@ -1,5 +1,6 @@
 package cz.kp.expensecalc.calculation.web;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,12 @@ public class CalculateAction extends ActionSupport {
 		if (calcBean.getBirthDate() == null) {
 
 			addFieldError("calcBean.birthDate", "Birth date is required.");
+
+		}
+		
+		if (calcBean.getAnnualSalary() != null && calcBean.getAnnualSalary().compareTo(new BigDecimal(2000000000))>0) {
+
+			addFieldError("calcBean.annualSalary", "Annual salary cannot be more than 2000000000.");
 
 		}
 

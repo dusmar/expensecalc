@@ -32,6 +32,39 @@ public class CalculationResult implements Serializable {
 	public void setExpense(BigDecimal expense) {
 		this.expense = expense;
 	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((currencyCode == null) ? 0 : currencyCode.hashCode());
+		result = prime * result + ((expense == null) ? 0 : expense.hashCode());
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CalculationResult other = (CalculationResult) obj;
+		if (currencyCode == null) {
+			if (other.currencyCode != null)
+				return false;
+		} else if (!currencyCode.equals(other.currencyCode))
+			return false;
+		if (expense == null) {
+			if (other.expense != null)
+				return false;
+		} else if (!(expense.compareTo(other.expense)==0))
+			return false;
+		return true;
+	}
 	
 	
 	

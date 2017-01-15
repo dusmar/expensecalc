@@ -18,7 +18,7 @@ public class CalculationDaoImplTest extends ExpenseCalcTest {
 
 	
 	@Test
-	public void saveTestSimple(){
+	public void saveSimpleTest(){
 		Calculation calc = new Calculation();
 		calc.setAnnualSalary(BigDecimal.ONE);
 		long curr = System.currentTimeMillis();

@@ -19,4 +19,9 @@
 	<context:component-scan base-package="cz.kp" />
 
 
+	<bean class="cz.kp.expensecalc.calculation.service.ws.YahooCurrencyConverterService">
+	</bean>
+
+
+
 </beans>
