@@ -16,10 +16,9 @@
 
 		<action name="calculationAction" class="calculateAction"
 			method="execute">
-			<interceptor-ref name="jsonValidationWorkflowStack" />
 			<result name="success" type="json">
 			</result>
-			<result name="error"> /error.jsp</result>
+			<result name="error">/WEB-INF/views/error.jsp</result>
 
 			<result name="input" type="json">
 				<param name="ignoreHierarchy">false</param>
