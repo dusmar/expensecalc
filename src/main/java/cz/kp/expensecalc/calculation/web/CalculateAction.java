@@ -49,6 +49,12 @@ public class CalculateAction extends ActionSupport {
 			addFieldError("calcBean.annualSalary", "Annual salary cannot be more than 2000000000.");
 
 		}
+		
+		if (calcBean.getAnnualSalary() != null && calcBean.getAnnualSalary().compareTo(new BigDecimal(0))<0) {
+
+			addFieldError("calcBean.annualSalary", "Annual salary cannot be less than 0.");
+
+		}
 
 	}
 

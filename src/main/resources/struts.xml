@@ -5,7 +5,11 @@
 
 <struts>
 	<package name="Calculation" extends="json-default">
-
+      <global-exception-mappings>
+         <exception-mapping exception="java.lang.Throwable"
+         result="error" />
+      </global-exception-mappings>
+      
 		<action name="index">
 			<result> /WEB-INF/views/Calculation.jsp</result>
 		</action>
